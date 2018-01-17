@@ -1,0 +1,28 @@
+{
+  "files": [
+    "lib",
+    "dist",
+    "readme.md"
+  ],
+  "name": "@theludd/io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:TheLudd/io.git",
+  "author": "Ludwig Magnusson <ludwig.magnusson@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@theludd/eslint-config-gaius": "^1.0.4",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "eslint": "^4.15.0",
+    "mocha": "^4.1.0",
+    "source-map-support": "^0.5.1"
+  },
+  "scripts": {
+    "transpile": "mkdir -p dist && babel lib -d dist --source-maps",
+    "prepublish": "yarn transpile",
+    "test": "mocha"
+  }
+}
