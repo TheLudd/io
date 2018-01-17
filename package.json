@@ -6,12 +6,13 @@
   ],
   "name": "@theludd/io",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/io.js",
   "repository": "git@github.com:TheLudd/io.git",
   "author": "Ludwig Magnusson <ludwig.magnusson@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@theludd/eslint-config-gaius": "^1.0.4",
+    "@theludd/fantasy-functions": "^1.0.1",
     "babel-cli": "^6.26.0",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-env": "^1.6.1",
@@ -24,5 +25,8 @@
     "transpile": "mkdir -p dist && babel lib -d dist --source-maps",
     "prepublish": "yarn transpile",
     "test": "mocha"
+  },
+  "dependencies": {
+    "fantasy-land": "^3.5.0"
   }
 }
