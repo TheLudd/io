@@ -33,13 +33,14 @@ describe('io', () => {
 
   it('should chain properly', () => {
     const runs = []
-    function addToRuns (v) {
-      return new IO(() => {
-        runs.push(v)
+    function addToArray (v) {
+      return new IO((arr) => {
+        arr.push(v)
+        return arr
       })
     }
-    const testIO = chain(addToRuns, map(getFullYear, nowIO))
-    runIO(testIO)
-    deepEqual(runs, [ 2018 ])
+    const testIO = chain(addToArray, map(getFullYear, nowIO))
+    runIO1(runs, testIO)
+    deepEqual(runs, [ new Date().getFullYear() ])
   })
 })
