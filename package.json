@@ -11,22 +11,22 @@
   "author": "Ludwig Magnusson <ludwig.magnusson@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@theludd/eslint-config-gaius": "^1.0.4",
-    "@theludd/fantasy-functions": "^1.0.1",
+    "@theludd/eslint-config-gaius": "^2.0.4",
+    "@theludd/fantasy-functions": "^1.1.0",
     "babel-cli": "^6.26.0",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-env": "^1.6.1",
-    "chai": "^4.1.2",
-    "eslint": "^4.15.0",
-    "mocha": "^4.1.0",
-    "source-map-support": "^0.5.1"
+    "babel-plugin-add-module-exports": "^1.0.2",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.2.0",
+    "eslint": "^6.6.0",
+    "mocha": "^6.2.2",
+    "source-map-support": "^0.5.16"
   },
   "scripts": {
     "transpile": "mkdir -p dist && babel lib -d dist --source-maps",
-    "prepublish": "yarn transpile",
+    "prepublishOnly": "yarn transpile",
     "test": "mocha"
   },
   "dependencies": {
-    "fantasy-land": "^3.5.0"
+    "fantasy-land": "^4.0.1"
   }
 }
