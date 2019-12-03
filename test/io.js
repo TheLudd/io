@@ -5,8 +5,8 @@ import { IO, runIO, runIO1 } from '../lib/io'
 const { deepEqual, equal } = assert
 
 const state = {
-  foo: 'the string foo',
   bar: 'the string bar',
+  foo: 'the string foo',
 }
 
 const getStateIO = new IO((key) => state[key])
