@@ -5,7 +5,7 @@
     "readme.md"
   ],
   "name": "@theludd/io",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "main": "dist/io.js",
   "module": "lib/io.js",
   "repository": "git@github.com:TheLudd/io.git",
